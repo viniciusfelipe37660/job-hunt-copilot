@@ -1,0 +1,24 @@
+{
+  "name": "job-hunt-copilot",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev -w web",
+    "dev:api": "npm run start:dev -w api",
+    "build": "npm run build --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "prisma:generate": "npm run prisma:generate -w api",
+    "prisma:migrate": "npm run prisma:migrate -w api"
+  },
+  "allowScripts": {
+    "prisma": true,
+    "@prisma/engines": true,
+    "@prisma/client": true,
+    "esbuild": true
+  }
+}

@@ -1,0 +1,10 @@
+# Copy to terraform.tfvars and fill in before ever running `terraform apply`
+# against a real AWS account. Never commit the real terraform.tfvars file.
+
+aws_region   = "us-east-1"
+project_name = "job-hunt-copilot"
+
+db_username       = "jobhunt"
+db_password       = "REPLACE_ME"
+clerk_secret_key  = "REPLACE_ME"
+anthropic_api_key = "REPLACE_ME"
